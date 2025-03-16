@@ -1,0 +1,9 @@
+FileVersion = 1
+
+[Project]
+Name = "zlib-beef"
+DefaultNamespace = "zlib"
+
+[Configs.Debug.Win64]
+CLibType = "DynamicDebug"
+LibPaths = ["$(ProjectDir)\\libs\\zsd.lib"]
