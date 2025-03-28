@@ -12,20 +12,19 @@ extension zlib
 {
 #if Z_SOLO
 
-	#if _WIN64
-	typealias z_size_t = c_ulonglong ;
-	#else
-	typealias z_size_t = c_ulong ;
-	#endif
+#if _WIN64
+	typealias z_size_t = c_ulonglong;
+#else
+	typealias z_size_t = c_ulong;
+#endif
 
 #else
-
 	typealias z_longlong = c_ulonglong;
 
 #if NO_SIZE_T
 	typealias z_size_t = unsigned;
-	#elif STDC
-	typealias z_size_t = size_t ;
+#elif STDC
+	typealias z_size_t = size_t;
 #else
 	typealias z_size_t = c_ulong;
 #endif
@@ -128,7 +127,7 @@ extension zlib
 	// #endif
 
 	// #if Z_U4
-	// typealias z_crc_t = Z_U4 ;
+	// typealias z_crc_t = Z_U4;
 	// #else
 	typealias z_crc_t = c_ulong;
 	// #endif
